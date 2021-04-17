@@ -1,6 +1,7 @@
 # with-auto-retry
 
 [![npm version](https://img.shields.io/npm/v/with-auto-retry.svg?style=flat-square)](https://www.npmjs.org/package/with-auto-retry)
+[![build](https://img.shields.io/github/workflow/status/wangsijie/with-auto-retry/units-test?style=flat-square)](https://github.com/wangsijie/with-auto-retry/actions/workflows/test.yml)
 
 Creates a function that will automaticly retry serval times on fail. Support both sync and async functions.
 
