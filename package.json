@@ -1,8 +1,9 @@
 {
-  "name": "with-retry",
+  "name": "with-auto-retry",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:wangsijie/with-retry.git",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "git@github.com:wangsijie/with-auto-retry.git",
   "description": "Creates a function that will automaticly retry serval times on fail.",
   "author": "wangsijie <i@sijie.wang>",
   "license": "MIT",
@@ -13,6 +14,7 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepack": "tsc"
   }
 }

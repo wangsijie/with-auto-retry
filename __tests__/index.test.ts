@@ -102,4 +102,18 @@ describe('async funciton', () => {
         const value = await newFunc();
         expect(value).toBe(1);
     });
+    test('secondsBeforeRetry', async () => {
+        const startTime= new Date().getTime();
+        let tryCount = 0;
+        const func = async () => {
+            if (tryCount < 1) {
+                tryCount++;
+                throw new Error('This is a random error.');
+            }
+            return new Date().getTime();
+        };
+        const newFunc = withRetry(func, { secondsBeforeRetry: 1 });
+        const value = await newFunc();
+        expect(value - startTime).toBeGreaterThanOrEqual(1000);
+    });
 });
