@@ -8,7 +8,9 @@ Creates a function that will automaticly retry serval times on fail. Support bot
 example:
 
 ```js
-const withAutoRetry = require('with-auto-retry');
+import withAutoRetry from 'with-auto-retry';
+// or js
+// const withAutoRetry = require('with-auto-retry').default;
 
 let tryCount = 0;
 const func = () => {

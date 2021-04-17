@@ -18,7 +18,7 @@ const sleep = (seconds: number) => new Promise((resolve) => {
  * @param configs
  * @return Returns the new restricted function.
  */
-export default function withRetry<T extends (...args: any) => any>(
+export default function withAutoRetry<T extends (...args: any) => any>(
     func: T,
     configs?: Configs,
 ): (...funcArgs: Parameters<T>) => ReturnType<T> {
